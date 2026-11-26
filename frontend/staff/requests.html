@@ -11,7 +11,7 @@
   
   
 <title>Quotation requests | Atelier Joinery Studio</title><link href="../css/styles.css" rel="stylesheet"/></head>
-<body class="min-h-screen flex flex-col bg-linen text-bark">
+<body class="min-h-screen flex flex-col bg-linen text-bark"><a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- 1. HEADER (Top bar matching Staff Sign-In style) -->
   <header class="w-full bg-white border-b border-outline-variant sticky top-0 z-30 shadow-sm">
@@ -47,7 +47,7 @@
   </header>
 
   <!-- MAIN CONTAINER -->
-  <main class="flex-1 max-w-[1400px] w-full mx-auto px-6 lg:px-10 py-8 flex flex-col">
+  <main id="main" class="flex-1 max-w-[1400px] w-full mx-auto px-6 lg:px-10 py-8 flex flex-col">
 
     <!-- 2. PAGE TITLE ROW -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6">
@@ -361,13 +361,13 @@
       <div class="flex items-center space-x-3">
         <span class="font-medium text-bark">1–6 of 6</span>
         <div class="inline-flex rounded-custom border border-outline-variant bg-white overflow-hidden shadow-xs">
-          <button type="button" disabled class="px-2.5 py-1.5 text-outline-variant cursor-not-allowed bg-[#fcf9f5]">
+          <button type="button" disabled aria-label="Previous page" class="px-2.5 py-1.5 text-outline-variant cursor-not-allowed bg-[#fcf9f5]">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
           <div class="w-[1px] bg-outline-variant"></div>
-          <button type="button" disabled class="px-2.5 py-1.5 text-outline-variant cursor-not-allowed bg-[#fcf9f5]">
+          <button type="button" disabled aria-label="Next page" class="px-2.5 py-1.5 text-outline-variant cursor-not-allowed bg-[#fcf9f5]">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
@@ -387,7 +387,7 @@
   <!-- FOOTER -->
   <footer class="w-full border-t border-outline-variant bg-linen py-6 mt-12">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-10 text-xs text-subtle-text">
-      Staff internal workspace. Sample data only.
+      Staff internal workspace. Sample data only.<a class="hover:text-on-surface underline" href="../accessibility.html">Accessibility statement</a>
     </div>
   </footer>
 

@@ -64,7 +64,9 @@ function renderCatalog(filter = '') {
     card.draggable = true;
     card.addEventListener('dragstart', (e) => e.dataTransfer.setData(DRAG_TYPE, type));
     const icon = el('div', 'w-12 h-12 rounded bg-surface-container-high flex items-center justify-center shrink-0');
-    icon.append(el('span', 'material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors', ICONS[type]));
+    const glyph = el('span', 'material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors', ICONS[type]);
+    glyph.setAttribute('aria-hidden', 'true'); // icon-font ligature, not text
+    icon.append(glyph);
     const text = el('div', 'flex flex-col flex-1 min-w-0');
     text.append(el('span', 'font-medium text-xs text-on-surface truncate', entry.label), el('p', 'text-[11px] text-on-surface-variant mt-0.5', HINTS[type]));
     const button = el('button', 'px-2.5 py-1.5 text-xs font-label bg-surface-container hover:bg-surface-container-high text-on-surface rounded', 'Add');
